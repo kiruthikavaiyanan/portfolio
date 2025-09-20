@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Kiruthika Vaiyanan</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('banner.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      animation: fadeDown 1s ease-in-out;
+    }
+    header h1 { 
+      margin: 0; 
+      font-size: 3em;
+      letter-spacing: 2px;
+    }
+    header p {
+      font-size: 1.3em;
+      margin-top: 10px;
+    }
+    .resume-btn {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      text-decoration: none;
+      font-size: 1em;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    .resume-btn:hover { 
+      background: #388e3c; 
+      transform: scale(1.05);
+    }
+    nav {
+      text-align: center;
+      background: #fff;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: #2e7d32;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #66bb6a; }
+    section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 40px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      animation: fadeUp 1s ease-in-out;
+    }
+    h2 { 
+      color: #2e7d32;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .photo-upload {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .photo-upload img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 4px solid #4CAF50;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.4s;
+    }
+    .photo-upload img:hover { transform: scale(1.05); }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .skill {
+      margin-bottom: 15px;
+    }
+    .skill-bar {
+      background: #e0e0e0;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .skill-level {
+      height: 12px;
+      border-radius: 20px;
+      background: linear-gradient(90deg, #4CAF50, #81c784);
+      width: 0;
+      transition: width 2s;
+    }
+    footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+    
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.5em;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover { color: #c8e6c9; }
+
+    /* Animations */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kiruthika Vaiyanan</h1>
+    <p>Computer Science and Engineering Student | Future Designer</p>
+    <a href="kiruthikavaiyanan.docx" class="resume-btn" download>📄 Download Resume</a>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#internship">Internship</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="photo-upload">
+      <img id="profile-pic" src="keerthi,tcs.jpg" alt="Your Photo">
+    </div>
+    <p>
+      I am <b>Kiruthika Vaiyanan</b>, a Computer Science and Engineering student with a strong interest in <b>design and coding</b>.  
+      I have a good foundation in programming (HTML, CSS, JavaScript, and Java) and I am continuously learning new technologies to improve my skills.  
+      I am passionate about <b>creative design</b> and I aim to build innovative solutions that blend technology with user-friendly design.  
+      With curiosity and a growth mindset, I am excited to explore new opportunities in software development and UI/UX design.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="Bankmanagement.jpg" alt="Bank Management System" style="width:100%; border-radius:10px; margin-bottom:10px;">
+        <h3>Bank Management System</h3>
+        <p>A digital platform to manage customer accounts, transactions, and secure banking operations efficiently.</p>
+      </div>
+      <div class="project-card">
+        <img src="Bloodbank.jpg" alt="Smart Blood Bank Management System" style="width:100%; border-radius:10px; margin-bottom:10px;">
+        <h3>Smart Blood Bank Management System</h3>
+        <p>An intelligent system to maintain donor and recipient records, ensuring real-time tracking of blood group availability.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">
+        <p>HTML & CSS</p>
+        <div class="skill-bar"><div class="skill-level" data-width="90%"></div></div>
+      </div>
+      <div class="skill">
+        <p>JavaScript</p>
+        <div class="skill-bar"><div class="skill-level" data-width="75%"></div></div>
+      </div>
+      <div class="skill">
+        <p>Java</p>
+        <div class="skill-bar"><div class="skill-level" data-width="80%"></div></div>
+      </div>
+      <div class="skill">
+        <p>Design Thinking</p>
+        <div class="skill-bar"><div class="skill-level" data-width="85%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="internship">
+    <h2>Internship</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Internship at Cyfotok Infosec LLP</h3>
+        <p>
+          Successfully completed a <b>15-day internship</b> at <b>Cyfotok Infosec LLP, Coimbatore</b>.  
+          During this program, I gained practical exposure to software development, cybersecurity practices, and real-world industry workflows.  
+          It helped me enhance my problem-solving abilities and understand teamwork in a professional environment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:vkiruthika69@gmail.com">vkiruthika69@gmail.com</a></p>
+    <p>Phone: +91-9488446367</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Kiruthika Vaiyanan | Designed with ❤</p>
+    <div class="social-icons">
+      <a href="#" target="_blank">🌐</a>
+      <a href="#" target="_blank">💼</a>
+      <a href="#" target="_blank">📸</a>
+    </div>
+  </footer>
+
+  <script>
+    // Animate skills bars when visible
+    const skillLevels = document.querySelectorAll('.skill-level');
+    window.addEventListener('scroll', () => {
+      skillLevels.forEach(bar => {
+        const rect = bar.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          bar.style.width = bar.getAttribute('data-width');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
